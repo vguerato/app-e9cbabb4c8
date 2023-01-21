@@ -1,0 +1,39 @@
+{
+	"info": {
+		"_postman_id": "14166a4e-1460-4fa3-87a7-c9aa3f731251",
+		"name": "API-DOC",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8000/api/serve",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/serve",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"serve"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
