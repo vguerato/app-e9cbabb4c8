@@ -6,7 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "http://localhost:8000/api/serve",
+			"name": "Import File",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -21,7 +21,7 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:8000/api/serve",
+					"raw": "http://localhost:8000/api/import",
 					"protocol": "http",
 					"host": [
 						"localhost"
