@@ -15,4 +15,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::post('/import', [FileController::class, 'import']);
+Route::middleware('api.public')
+    ->post('/import', [FileController::class, 'import']);

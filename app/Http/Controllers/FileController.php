@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ImportFileRequest;
 use App\Services\FileService;
 use Exception;
 use Illuminate\Http\JsonResponse;
@@ -19,11 +20,12 @@ class FileController extends Controller
     /**
      * @throws Exception
      */
-    public function import(Request $request): JsonResponse
+    public function import(ImportFileRequest $request): JsonResponse
     {
         $file = $request->file('file');
-        $content = $this->fileService->read($file->getContent());
+        $xml = $this->fileService->read($file->getContent());
+        $data = $this->fileService->parse($xml);
 
-        return response()->json($content);
+        return response()->json($data);
     }
 }
